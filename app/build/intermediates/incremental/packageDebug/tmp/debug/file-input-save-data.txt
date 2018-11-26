@@ -1,0 +1,7 @@
+#Internal package file, do not edit.
+#Mon Nov 26 09:07:52 EAT 2018
+0.baseType=DIRECTORY
+0.base=E\:\\pic\\CurvedBottomNavigation\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
+0.path=classes.dex
+0.set=DEX
+count=1

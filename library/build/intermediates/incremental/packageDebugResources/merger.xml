@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="main$Generated" generated="true" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="E:\pic\CurvedBottomNavigation\library\src\main\res"/><source path="E:\pic\CurvedBottomNavigation\library\build\generated\res\rs\debug"/><source path="E:\pic\CurvedBottomNavigation\library\build\generated\res\resValues\debug"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="main" generated-set="main$Generated" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="E:\pic\CurvedBottomNavigation\library\src\main\res"><file path="E:\pic\CurvedBottomNavigation\library\src\main\res\values\attrs.xml" qualifiers=""><declare-styleable name="CurvedBottomBar">
+    
+    <attr name="curvedBackgroundTint"/>
+    
+    <attr name="curvedElevation"/>
+    
+    <attr name="curvedFabAlignmentMode">
+      
+      <enum name="center" value="0"/>
+      
+      <enum name="end" value="1"/>
+    </attr>
+    
+    <attr name="curvedFabAnimationMode">
+      
+      <enum name="scale" value="0"/>
+      
+      <enum name="slide" value="1"/>
+    </attr>
+    
+    <attr format="dimension" name="curvedFabCradleMargin"/>
+    
+    <attr format="dimension" name="curvedFabCradleRoundedCornerRadius"/>
+    
+    <attr format="dimension" name="curvedFabCradleVerticalOffset"/>
+    
+    <attr format="boolean" name="curvedHideOnScroll"/>
+  </declare-styleable><attr format="reference" name="curvedBottomBarStyle"/><declare-styleable name="BottomNavigationView">
+    
+    <attr name="menu"/>
+    
+    <attr name="labelVisibilityMode">
+      
+      <enum name="auto" value="-1"/>
+      
+      <enum name="selected" value="0"/>
+      
+      <enum name="labeled" value="1"/>
+      
+      <enum name="unlabeled" value="2"/>
+    </attr>
+    
+    <attr name="itemBackground"/>
+    
+    <attr name="itemIconSize"/>
+    
+    <attr name="itemIconTint"/>
+    
+    <attr format="reference" name="itemTextAppearanceInactive"/>
+    
+    <attr format="reference" name="itemTextAppearanceActive"/>
+    
+    <attr name="itemTextColor"/>
+    
+    <attr format="boolean" name="itemHorizontalTranslationEnabled"/>
+    <attr name="elevation"/>
+  </declare-styleable><attr format="reference" name="bottomNavigationStyle"/></file><file path="E:\pic\CurvedBottomNavigation\library\src\main\res\values\dimens.xml" qualifiers=""><dimen name="mtrl_curvedbottombar_fabOffsetEndMode">60dp</dimen><dimen name="mtrl_curvedbottombar_fab_cradle_margin">5dp</dimen><dimen name="mtrl_curvedbottombar_fab_cradle_rounded_corner_radius">8dp</dimen><dimen name="mtrl_curvedbottombar_fab_cradle_vertical_offset">0dp</dimen><dimen name="mtrl_curvedbottombar_height">56dp</dimen><dimen name="design_bottom_navigation_shadow_height">1dp</dimen><dimen name="design_bottom_navigation_item_max_width">96dp</dimen><dimen name="design_bottom_navigation_item_min_width">56dp</dimen><dimen name="design_bottom_navigation_icon_size">24dp</dimen><dimen name="design_bottom_navigation_active_item_max_width">168dp</dimen><dimen name="design_bottom_navigation_active_item_min_width">96dp</dimen><dimen name="design_bottom_navigation_elevation">8dp</dimen><dimen name="design_bottom_navigation_margin">8dp</dimen><dimen name="design_bottom_navigation_text_size">12sp</dimen><dimen name="design_bottom_navigation_height">56dp</dimen><dimen name="design_bottom_navigation_active_text_size">14sp</dimen></file><file path="E:\pic\CurvedBottomNavigation\library\src\main\res\values\styles.xml" qualifiers=""><style name="Widget.MaterialComponents.CurvedBottomBar" parent="Widget.MaterialComponents.BottomNavigationView">
+    <item name="enforceMaterialTheme">true</item>
+    <item name="backgroundTint">?attr/colorSurface</item>
+    <item name="fabCradleMargin">@dimen/mtrl_curvedbottombar_fab_cradle_margin</item>
+    <item name="fabCradleRoundedCornerRadius">
+      @dimen/mtrl_curvedbottombar_fab_cradle_rounded_corner_radius
+    </item>
+    <item name="fabCradleVerticalOffset">@dimen/mtrl_curvedbottombar_fab_cradle_vertical_offset</item>
+    <item name="android:minHeight">@dimen/mtrl_curvedbottombar_height</item>
+    <item name="maxButtonHeight">@dimen/mtrl_curvedbottombar_height</item>
+    <item name="elevation">8dp</item>
+  </style><style name="Widget.MaterialComponents.CurvedBottomBar.Colored" parent="Widget.MaterialComponents.CurvedBottomBar">
+    <item name="backgroundTint">?attr/colorPrimary</item>
+    <item name="materialThemeOverlay">@style/ThemeOverlay.MaterialComponents.CurvedBottomBar.Primary</item>
+  </style><style name="ThemeOverlay.MaterialComponents.CurvedBottomBar.Surface" parent="">
+    <item name="colorControlNormal">?attr/colorOnSurfaceEmphasisMedium</item>
+    <item name="actionMenuTextColor">?attr/colorOnSurfaceEmphasisMedium</item>
+  </style><style name="ThemeOverlay.MaterialComponents.CurvedBottomBar.Primary" parent="">
+    <item name="colorControlNormal">?attr/colorOnPrimary</item>
+    <item name="actionMenuTextColor">?attr/colorOnPrimary</item>
+  </style><style name="Widget.Design.BottomNavigationView" parent="">
+    <item name="elevation">@dimen/design_bottom_navigation_elevation</item>
+    <item name="enforceTextAppearance">false</item>
+    <item name="enforceMaterialTheme">false</item>
+    <item name="itemBackground">?attr/selectableItemBackgroundBorderless</item>
+    <item name="itemHorizontalTranslationEnabled">true</item>
+    <item name="itemIconSize">@dimen/design_bottom_navigation_icon_size</item>
+    <item name="labelVisibilityMode">auto</item>
+  </style><style name="Widget.MaterialComponents.BottomNavigationView.Colored">
+    <item name="android:background">?attr/colorPrimary</item>
+    <item name="enforceTextAppearance">true</item>
+    <item name="enforceMaterialTheme">true</item>
+    <item name="itemIconTint">@color/mtrl_bottom_nav_colored_item_tint</item>
+    <item name="itemTextAppearanceInactive">?attr/textAppearanceCaption</item>
+    <item name="itemTextAppearanceActive">?attr/textAppearanceCaption</item>
+    <item name="itemTextColor">@color/mtrl_bottom_nav_colored_item_tint</item>
+  </style><style name="Widget.MaterialComponents.BottomNavigationView" parent="Widget.Design.BottomNavigationView">
+    <item name="android:background">?attr/colorSurface</item>
+    <item name="enforceTextAppearance">true</item>
+    <item name="enforceMaterialTheme">true</item>
+    <item name="itemHorizontalTranslationEnabled">false</item>
+    <item name="itemIconTint">@color/mtrl_bottom_nav_item_tint</item>
+    <item name="itemTextAppearanceInactive">?attr/textAppearanceCaption</item>
+    <item name="itemTextAppearanceActive">?attr/textAppearanceCaption</item>
+    <item name="itemTextColor">@color/mtrl_bottom_nav_item_tint</item>
+  </style></file><file path="E:\pic\CurvedBottomNavigation\library\src\main\res\values-sw600dp\dimens.xml" qualifiers="sw600dp-v13"><dimen name="mtrl_curvedbottombar_height">64dp</dimen></file><file name="design_bottom_navigation_item_background" path="E:\pic\CurvedBottomNavigation\library\src\main\res\drawable-v21\design_bottom_navigation_item_background.xml" qualifiers="v21" type="drawable"/><file path="E:\pic\CurvedBottomNavigation\library\src\main\res\values\colors.xml" qualifiers=""><color name="design_bottom_navigation_shadow_color">#14000000</color></file><file name="design_bottom_navigation_item_background" path="E:\pic\CurvedBottomNavigation\library\src\main\res\drawable\design_bottom_navigation_item_background.xml" qualifiers="" type="drawable"/><file path="E:\pic\CurvedBottomNavigation\library\src\main\res\values\strings.xml" qualifiers=""><string name="hide_bottom_view_on_scroll_behavior" translatable="false">com.google.android.material.behavior.HideBottomViewOnScrollBehavior</string></file><file name="mtrl_bottom_nav_item_tint" path="E:\pic\CurvedBottomNavigation\library\src\main\res\color\mtrl_bottom_nav_item_tint.xml" qualifiers="" type="color"/><file name="mtrl_bottom_nav_colored_item_tint" path="E:\pic\CurvedBottomNavigation\library\src\main\res\color\mtrl_bottom_nav_colored_item_tint.xml" qualifiers="" type="color"/><file name="design_bottom_navigation_item" path="E:\pic\CurvedBottomNavigation\library\src\main\res\layout\design_bottom_navigation_item.xml" qualifiers="" type="layout"/></source><source path="E:\pic\CurvedBottomNavigation\library\build\generated\res\rs\debug"/><source path="E:\pic\CurvedBottomNavigation\library\build\generated\res\resValues\debug"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="debug$Generated" generated="true" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="E:\pic\CurvedBottomNavigation\library\src\debug\res"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="debug" generated-set="debug$Generated" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="E:\pic\CurvedBottomNavigation\library\src\debug\res"/></dataSet><mergedItems><configuration qualifiers=""><declare-styleable name="BottomNavigationView">
+    
+    <attr name="menu"/>
+    
+    <attr name="labelVisibilityMode">
+      
+      <enum name="auto" value="-1"/>
+      
+      <enum name="selected" value="0"/>
+      
+      <enum name="labeled" value="1"/>
+      
+      <enum name="unlabeled" value="2"/>
+    </attr>
+    
+    <attr name="itemBackground"/>
+    
+    <attr name="itemIconSize"/>
+    
+    <attr name="itemIconTint"/>
+    
+    <attr format="reference" name="itemTextAppearanceInactive"/>
+    
+    <attr format="reference" name="itemTextAppearanceActive"/>
+    
+    <attr name="itemTextColor"/>
+    
+    <attr format="boolean" name="itemHorizontalTranslationEnabled"/>
+    <attr name="elevation"/>
+  </declare-styleable><declare-styleable name="CurvedBottomBar">
+    
+    <attr name="curvedBackgroundTint"/>
+    
+    <attr name="curvedElevation"/>
+    
+    <attr name="curvedFabAlignmentMode">
+      
+      <enum name="center" value="0"/>
+      
+      <enum name="end" value="1"/>
+    </attr>
+    
+    <attr name="curvedFabAnimationMode">
+      
+      <enum name="scale" value="0"/>
+      
+      <enum name="slide" value="1"/>
+    </attr>
+    
+    <attr format="dimension" name="curvedFabCradleMargin"/>
+    
+    <attr format="dimension" name="curvedFabCradleRoundedCornerRadius"/>
+    
+    <attr format="dimension" name="curvedFabCradleVerticalOffset"/>
+    
+    <attr format="boolean" name="curvedHideOnScroll"/>
+  </declare-styleable></configuration></mergedItems></merger>

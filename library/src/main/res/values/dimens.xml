@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Copyright 2017 The Android Open Source Project
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+-->
+
+<resources>
+  <!-- When the fabAlignmentMode is set to the end, the fab should be offset by this amount. -->
+  <dimen name="mtrl_curvedbottombar_fabOffsetEndMode">60dp</dimen>
+  <dimen name="mtrl_curvedbottombar_fab_cradle_margin">5dp</dimen>
+  <dimen name="mtrl_curvedbottombar_fab_cradle_rounded_corner_radius">8dp</dimen>
+  <dimen name="mtrl_curvedbottombar_fab_cradle_vertical_offset">0dp</dimen>
+  <dimen name="mtrl_curvedbottombar_height">56dp</dimen>
+
+  <dimen name="design_bottom_navigation_elevation">8dp</dimen>
+  <dimen name="design_bottom_navigation_shadow_height">1dp</dimen>
+  <dimen name="design_bottom_navigation_icon_size">24dp</dimen>
+  <dimen name="design_bottom_navigation_height">56dp</dimen>
+  <dimen name="design_bottom_navigation_margin">8dp</dimen>
+  <dimen name="design_bottom_navigation_text_size">12sp</dimen>
+  <dimen name="design_bottom_navigation_active_text_size">14sp</dimen>
+  <dimen name="design_bottom_navigation_item_min_width">56dp</dimen>
+  <dimen name="design_bottom_navigation_item_max_width">96dp</dimen>
+  <dimen name="design_bottom_navigation_active_item_max_width">168dp</dimen>
+  <dimen name="design_bottom_navigation_active_item_min_width">96dp</dimen>
+</resources>
