@@ -206,21 +206,42 @@ public class BottomNavigationMenuView extends ViewGroup implements MenuView {
 
   @Override
   protected void onLayout(boolean changed, int left, int top, int right, int bottom) {
+    if(menu.size() % 2 != 0){
+      throw new IllegalArgumentException("Number of items must be even for proper layout of the navigation items ie 2 or 4");
+    }
     final int count = getChildCount();
     final int width = right - left;
     final int height = bottom - top;
     int used = 0;
-    for (int i = 0; i < count; i++) {
-      final View child = getChildAt(i);
-      if (child.getVisibility() == GONE) {
-        continue;
+    if (count > 2) {
+      for (int i = 0; i < count; i++) {
+        final View child = getChildAt(i);
+        if (child.getVisibility() == GONE) {
+          continue;
+        }
+        if (ViewCompat.getLayoutDirection(this) == ViewCompat.LAYOUT_DIRECTION_RTL) {
+          child.layout(width - used - child.getMeasuredWidth(), 0, width - used, height);
+        } else {
+          if (i == 1) {
+            child.layout(used - 40, 0, child.getMeasuredWidth() + (used - 40), height);
+            used += child.getMeasuredWidth();
+            continue;
+          }
+
+          if (i == 2) {
+            child.layout(used + 40, 0, child.getMeasuredWidth() + used + 40, height);
+            used += child.getMeasuredWidth();
+            continue;
+          }
+          child.layout(used, 0, child.getMeasuredWidth() + used, height);
+        }
+        used += child.getMeasuredWidth();
       }
-      if (ViewCompat.getLayoutDirection(this) == ViewCompat.LAYOUT_DIRECTION_RTL) {
-        child.layout(width - used - child.getMeasuredWidth(), 0, width - used, height);
-      } else {
-        child.layout(used, 0, child.getMeasuredWidth() + used, height);
-      }
-      used += child.getMeasuredWidth();
+    }else {
+      final View child1 = getChildAt(0);
+      final View child2 = getChildAt(1);
+      child1.layout(0, 0, child1.getMeasuredWidth() - 90, height);
+      child2.layout(360, 0, child2.getMeasuredWidth() + 360, height);
     }
   }
 

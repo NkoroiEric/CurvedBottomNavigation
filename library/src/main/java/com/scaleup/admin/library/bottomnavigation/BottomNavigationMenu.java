@@ -29,7 +29,7 @@ import android.view.SubMenu;
 @SuppressWarnings("RestrictedApi")
 @RestrictTo(LIBRARY_GROUP)
 public final class BottomNavigationMenu extends MenuBuilder {
-  public static final int MAX_ITEM_COUNT = 5;
+  public static final int MAX_ITEM_COUNT = 4;
 
   public BottomNavigationMenu(Context context) {
     super(context);
