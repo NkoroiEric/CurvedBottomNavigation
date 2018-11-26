@@ -15,7 +15,7 @@
   ~ limitations under the License.
 -->
 <resources>
-  <declare-styleable name="CurvedBottomBar">
+  <declare-styleable name="CurvedBottomNavigation">
     <!-- Background for the BottomAppBar. -->
     <attr name="curvedBackgroundTint"/>
     <!-- Elevation for the BottomAppBar. -->

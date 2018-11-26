@@ -16,15 +16,15 @@
                 android:layout_height="wrap_content"/>
     </androidx.core.widget.NestedScrollView>
 
-    <com.scaleup.admin.library.curvedbottomnavigation.CurvedBottomBar android:layout_width="match_parent"
-                                                                      android:id="@+id/bar"
-                                                                      app:curvedHideOnScroll="true"
-                                                                      app:curvedBackgroundTint="@android:color/white"
-                                                                      android:layout_gravity="bottom"
-                                                                      app:menu="@menu/navigation"
-                                                                      app:labelVisibilityMode="labeled"
-                                                                      app:curvedFabCradleMargin="8dp"
-                                                                      android:layout_height="wrap_content"/>
+    <com.scaleup.admin.library.curvedbottomnavigation.CurvedBottomNavigation android:layout_width="match_parent"
+                                                                             android:id="@+id/bar"
+                                                                             app:curvedHideOnScroll="true"
+                                                                             app:curvedBackgroundTint="@android:color/white"
+                                                                             android:layout_gravity="bottom"
+                                                                             app:menu="@menu/navigation"
+                                                                             app:labelVisibilityMode="labeled"
+                                                                             app:curvedFabCradleMargin="8dp"
+                                                                             android:layout_height="wrap_content"/>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton android:layout_width="wrap_content"
                                                                            app:layout_anchor="@id/bar"

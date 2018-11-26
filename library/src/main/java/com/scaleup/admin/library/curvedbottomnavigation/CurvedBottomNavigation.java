@@ -24,7 +24,6 @@ import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
-import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.res.ColorStateList;
 import android.content.res.TypedArray;
@@ -42,8 +41,6 @@ import androidx.annotation.Px;
 import com.google.android.material.animation.AnimationUtils;
 import com.google.android.material.animation.TransformationListener;
 import com.google.android.material.behavior.HideBottomViewOnScrollBehavior;
-import com.google.android.material.bottomnavigation.BottomNavigationItemView;
-import com.google.android.material.bottomnavigation.BottomNavigationMenuView;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.floatingactionbutton.FloatingActionButton.OnVisibilityChangedListener;
@@ -59,7 +56,6 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.ViewCompat.NestedScrollType;
 import androidx.core.view.ViewCompat.ScrollAxis;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
@@ -67,18 +63,17 @@ import com.scaleup.admin.library.R;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
-import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.List;
 
 /**
  * The CurvedBottomBar App Bar is an extension of Toolbar that supports a shaped background that "cradles" an
- * attached {@link FloatingActionButton}. A FAB is anchored to {@link CurvedBottomBar} by calling
+ * attached {@link FloatingActionButton}. A FAB is anchored to {@link CurvedBottomNavigation} by calling
  * {@link CoordinatorLayout.LayoutParams#setAnchorId(int)}, or by setting {@code app:layout_anchor}
  * on the FAB in xml.
  *
  * <p>There are two modes which determine where the FAB is shown relative to the {@link
- * CurvedBottomBar}. {@link #FAB_ALIGNMENT_MODE_CENTER} mode is the primary mode with the FAB is
+ * CurvedBottomNavigation}. {@link #FAB_ALIGNMENT_MODE_CENTER} mode is the primary mode with the FAB is
  * centered. {@link #FAB_ALIGNMENT_MODE_END} is the secondary mode with the FAB on the side.
  *
  * <p>Do not use the {@code android:background} attribute or call {@code CurvedBottomBar.setBackground}
@@ -114,7 +109,7 @@ import java.util.List;
  * @attr ref com.google.android.material.R.styleable#CurvedBottomBar_hideOnScroll
  */
 @SuppressWarnings("RestrictedApi")
-public class CurvedBottomBar extends BottomNavigationView implements AttachedBehavior {
+public class CurvedBottomNavigation extends BottomNavigationView implements AttachedBehavior {
 
   private static final int DEF_STYLE_RES = R.style.Widget_MaterialComponents_CurvedBottomBar;
 
@@ -156,9 +151,9 @@ public class CurvedBottomBar extends BottomNavigationView implements AttachedBeh
   private boolean hideOnScroll;
 
   /**
-   * If the {@link FloatingActionButton} is actually cradled in the {@link CurvedBottomBar} or if the
+   * If the {@link FloatingActionButton} is actually cradled in the {@link CurvedBottomNavigation} or if the
    * {@link FloatingActionButton} is detached which will happen when the {@link
-   * FloatingActionButton} is not visible, or when the {@link CurvedBottomBar} is scrolled off the
+   * FloatingActionButton} is not visible, or when the {@link CurvedBottomNavigation} is scrolled off the
    * screen.
    */
   private boolean fabAttached = true;
@@ -195,37 +190,37 @@ public class CurvedBottomBar extends BottomNavigationView implements AttachedBeh
         }
       };
 
-  public CurvedBottomBar(Context context) {
+  public CurvedBottomNavigation(Context context) {
     this(context, null, 0);
   }
 
-  public CurvedBottomBar(Context context, @Nullable AttributeSet attrs) {
+  public CurvedBottomNavigation(Context context, @Nullable AttributeSet attrs) {
     this(context, attrs, R.attr.curvedBottomBarStyle);
   }
 
-  public CurvedBottomBar(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
+  public CurvedBottomNavigation(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
     super(createThemedContext(context, attrs, defStyleAttr, DEF_STYLE_RES), attrs, defStyleAttr);
     // Ensure we are using the correctly themed context rather than the context that was passed in.
     context = getContext();
 
     TypedArray a =
         ThemeEnforcement.obtainStyledAttributes(
-            context, attrs, R.styleable.CurvedBottomBar, defStyleAttr, DEF_STYLE_RES);
+            context, attrs, R.styleable.CurvedBottomNavigation, defStyleAttr, DEF_STYLE_RES);
 
     ColorStateList backgroundTint =
-        MaterialResources.getColorStateList(context, a, R.styleable.CurvedBottomBar_curvedBackgroundTint);
+        MaterialResources.getColorStateList(context, a, R.styleable.CurvedBottomNavigation_curvedBackgroundTint);
 
-    int elevation = a.getDimensionPixelSize(R.styleable.CurvedBottomBar_curvedElevation, 0);
-    float fabCradleMargin = a.getDimensionPixelOffset(R.styleable.CurvedBottomBar_curvedFabCradleMargin, 0);
+    int elevation = a.getDimensionPixelSize(R.styleable.CurvedBottomNavigation_curvedElevation, 0);
+    float fabCradleMargin = a.getDimensionPixelOffset(R.styleable.CurvedBottomNavigation_curvedFabCradleMargin, 0);
     float fabCornerRadius =
-        a.getDimensionPixelOffset(R.styleable.CurvedBottomBar_curvedFabCradleRoundedCornerRadius, 0);
+        a.getDimensionPixelOffset(R.styleable.CurvedBottomNavigation_curvedFabCradleRoundedCornerRadius, 0);
     fabVerticalOffset =
-        a.getDimensionPixelOffset(R.styleable.CurvedBottomBar_curvedFabCradleVerticalOffset, 0);
+        a.getDimensionPixelOffset(R.styleable.CurvedBottomNavigation_curvedFabCradleVerticalOffset, 0);
     fabAlignmentMode =
-        a.getInt(R.styleable.CurvedBottomBar_curvedFabAlignmentMode, FAB_ALIGNMENT_MODE_CENTER);
+        a.getInt(R.styleable.CurvedBottomNavigation_curvedFabAlignmentMode, FAB_ALIGNMENT_MODE_CENTER);
     fabAnimationMode =
-        a.getInt(R.styleable.CurvedBottomBar_curvedFabAnimationMode, FAB_ANIMATION_MODE_SCALE);
-    hideOnScroll = a.getBoolean(R.styleable.CurvedBottomBar_curvedHideOnScroll, false);
+        a.getInt(R.styleable.CurvedBottomNavigation_curvedFabAnimationMode, FAB_ANIMATION_MODE_SCALE);
+    hideOnScroll = a.getBoolean(R.styleable.CurvedBottomNavigation_curvedHideOnScroll, false);
 
     a.recycle();
 
@@ -349,7 +344,7 @@ public class CurvedBottomBar extends BottomNavigationView implements AttachedBeh
   }
 
   /**
-   * Returns true if the {@link CurvedBottomBar} should hide when a {@link
+   * Returns true if the {@link CurvedBottomNavigation} should hide when a {@link
    * androidx.core.view.NestedScrollingChild} is scrolled. This is handled by {@link
    * Behavior}.
    */
@@ -358,7 +353,7 @@ public class CurvedBottomBar extends BottomNavigationView implements AttachedBeh
   }
 
   /**
-   * Sets if the {@link CurvedBottomBar} should hide when a {@link
+   * Sets if the {@link CurvedBottomNavigation} should hide when a {@link
    * androidx.core.view.NestedScrollingChild} is scrolled. This is handled by {@link
    * Behavior}.
    */
@@ -387,7 +382,7 @@ public class CurvedBottomBar extends BottomNavigationView implements AttachedBeh
 
   /**
    * Sets the fab diameter. This will be called automatically by the {@link Behavior}
-   * if the fab is anchored to this {@link CurvedBottomBar}.
+   * if the fab is anchored to this {@link CurvedBottomNavigation}.
    */
   void setFabDiameter(@Px int diameter) {
     if (diameter != topEdgeTreatment.getFabDiameter()) {
@@ -599,7 +594,7 @@ public class CurvedBottomBar extends BottomNavigationView implements AttachedBeh
 
   @NonNull
   @Override
-  public CoordinatorLayout.Behavior<CurvedBottomBar> getBehavior() {
+  public CoordinatorLayout.Behavior<CurvedBottomNavigation> getBehavior() {
     if (behavior == null) {
       behavior = new Behavior();
     }
@@ -618,10 +613,10 @@ public class CurvedBottomBar extends BottomNavigationView implements AttachedBeh
   }
 
   /**
-   * Behavior designed for use with {@link CurvedBottomBar} instances. Its main function is to link a
+   * Behavior designed for use with {@link CurvedBottomNavigation} instances. Its main function is to link a
    * dependent {@link FloatingActionButton} so that it can be shown docked in the cradle.
    */
-  public static class Behavior extends HideBottomViewOnScrollBehavior<CurvedBottomBar> {
+  public static class Behavior extends HideBottomViewOnScrollBehavior<CurvedBottomNavigation> {
 
     private final Rect fabContentRect;
 
@@ -636,7 +631,7 @@ public class CurvedBottomBar extends BottomNavigationView implements AttachedBeh
 
     @Override
     public boolean onLayoutChild(
-        CoordinatorLayout parent, CurvedBottomBar child, int layoutDirection) {
+            CoordinatorLayout parent, CurvedBottomNavigation child, int layoutDirection) {
       FloatingActionButton fab = child.findDependentFab();
       if (fab != null && !ViewCompat.isLaidOut(fab)) {
         // Set the initial position of the FloatingActionButton with the CurvedBottomBar vertical
@@ -664,7 +659,7 @@ public class CurvedBottomBar extends BottomNavigationView implements AttachedBeh
     @Override
     public boolean onStartNestedScroll(
         @NonNull CoordinatorLayout coordinatorLayout,
-        @NonNull CurvedBottomBar child,
+        @NonNull CurvedBottomNavigation child,
         @NonNull View directTargetChild,
         @NonNull View target,
         @ScrollAxis int axes,
@@ -676,7 +671,7 @@ public class CurvedBottomBar extends BottomNavigationView implements AttachedBeh
     }
 
     @Override
-    public void slideUp(CurvedBottomBar child) {
+    public void slideUp(CurvedBottomNavigation child) {
       super.slideUp(child);
       FloatingActionButton fab = child.findDependentFab();
       if (fab != null) {
@@ -689,7 +684,7 @@ public class CurvedBottomBar extends BottomNavigationView implements AttachedBeh
     }
 
     @Override
-    public void slideDown(CurvedBottomBar child) {
+    public void slideDown(CurvedBottomNavigation child) {
       super.slideDown(child);
       FloatingActionButton fab = child.findDependentFab();
       if (fab != null) {

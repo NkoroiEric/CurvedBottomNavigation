@@ -14492,31 +14492,31 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Attribute</th><th>Description</th></tr>
-     * <tr><td><code>{@link #CurvedBottomBar_curvedBackgroundTint com.scaleup.admin.curvedbottomnavigation:curvedBackgroundTint}</code></td><td></td></tr>
-     * <tr><td><code>{@link #CurvedBottomBar_curvedElevation com.scaleup.admin.curvedbottomnavigation:curvedElevation}</code></td><td></td></tr>
-     * <tr><td><code>{@link #CurvedBottomBar_curvedFabAlignmentMode com.scaleup.admin.curvedbottomnavigation:curvedFabAlignmentMode}</code></td><td></td></tr>
-     * <tr><td><code>{@link #CurvedBottomBar_curvedFabAnimationMode com.scaleup.admin.curvedbottomnavigation:curvedFabAnimationMode}</code></td><td></td></tr>
-     * <tr><td><code>{@link #CurvedBottomBar_curvedFabCradleMargin com.scaleup.admin.curvedbottomnavigation:curvedFabCradleMargin}</code></td><td></td></tr>
-     * <tr><td><code>{@link #CurvedBottomBar_curvedFabCradleRoundedCornerRadius com.scaleup.admin.curvedbottomnavigation:curvedFabCradleRoundedCornerRadius}</code></td><td></td></tr>
-     * <tr><td><code>{@link #CurvedBottomBar_curvedFabCradleVerticalOffset com.scaleup.admin.curvedbottomnavigation:curvedFabCradleVerticalOffset}</code></td><td></td></tr>
-     * <tr><td><code>{@link #CurvedBottomBar_curvedHideOnScroll com.scaleup.admin.curvedbottomnavigation:curvedHideOnScroll}</code></td><td></td></tr>
+     * <tr><td><code>{@link #CurvedBottomNavigation_curvedBackgroundTint com.scaleup.admin.curvedbottomnavigation:curvedBackgroundTint}</code></td><td></td></tr>
+     * <tr><td><code>{@link #CurvedBottomNavigation_curvedElevation com.scaleup.admin.curvedbottomnavigation:curvedElevation}</code></td><td></td></tr>
+     * <tr><td><code>{@link #CurvedBottomNavigation_curvedFabAlignmentMode com.scaleup.admin.curvedbottomnavigation:curvedFabAlignmentMode}</code></td><td></td></tr>
+     * <tr><td><code>{@link #CurvedBottomNavigation_curvedFabAnimationMode com.scaleup.admin.curvedbottomnavigation:curvedFabAnimationMode}</code></td><td></td></tr>
+     * <tr><td><code>{@link #CurvedBottomNavigation_curvedFabCradleMargin com.scaleup.admin.curvedbottomnavigation:curvedFabCradleMargin}</code></td><td></td></tr>
+     * <tr><td><code>{@link #CurvedBottomNavigation_curvedFabCradleRoundedCornerRadius com.scaleup.admin.curvedbottomnavigation:curvedFabCradleRoundedCornerRadius}</code></td><td></td></tr>
+     * <tr><td><code>{@link #CurvedBottomNavigation_curvedFabCradleVerticalOffset com.scaleup.admin.curvedbottomnavigation:curvedFabCradleVerticalOffset}</code></td><td></td></tr>
+     * <tr><td><code>{@link #CurvedBottomNavigation_curvedHideOnScroll com.scaleup.admin.curvedbottomnavigation:curvedHideOnScroll}</code></td><td></td></tr>
      * </table>
-     * @see #CurvedBottomBar_curvedBackgroundTint
-     * @see #CurvedBottomBar_curvedElevation
-     * @see #CurvedBottomBar_curvedFabAlignmentMode
-     * @see #CurvedBottomBar_curvedFabAnimationMode
-     * @see #CurvedBottomBar_curvedFabCradleMargin
-     * @see #CurvedBottomBar_curvedFabCradleRoundedCornerRadius
-     * @see #CurvedBottomBar_curvedFabCradleVerticalOffset
-     * @see #CurvedBottomBar_curvedHideOnScroll
+     * @see #CurvedBottomNavigation_curvedBackgroundTint
+     * @see #CurvedBottomNavigation_curvedElevation
+     * @see #CurvedBottomNavigation_curvedFabAlignmentMode
+     * @see #CurvedBottomNavigation_curvedFabAnimationMode
+     * @see #CurvedBottomNavigation_curvedFabCradleMargin
+     * @see #CurvedBottomNavigation_curvedFabCradleRoundedCornerRadius
+     * @see #CurvedBottomNavigation_curvedFabCradleVerticalOffset
+     * @see #CurvedBottomNavigation_curvedHideOnScroll
      */
-    public static final int[] CurvedBottomBar={
+    public static final int[] CurvedBottomNavigation ={
       0x7f0300d8, 0x7f0300da, 0x7f0300db, 0x7f0300dc, 
       0x7f0300dd, 0x7f0300de, 0x7f0300df, 0x7f0300e0
     };
     /**
      * <p>This symbol is the offset where the {@link com.scaleup.admin.curvedbottomnavigation.R.attr#curvedBackgroundTint}
-     * attribute's value can be found in the {@link #CurvedBottomBar} array.
+     * attribute's value can be found in the {@link #CurvedBottomNavigation} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -14543,10 +14543,10 @@ public final class R {
      *
      * @attr name com.scaleup.admin.curvedbottomnavigation:curvedBackgroundTint
      */
-    public static final int CurvedBottomBar_curvedBackgroundTint=0;
+    public static final int CurvedBottomNavigation_curvedBackgroundTint =0;
     /**
      * <p>This symbol is the offset where the {@link com.scaleup.admin.curvedbottomnavigation.R.attr#curvedElevation}
-     * attribute's value can be found in the {@link #CurvedBottomBar} array.
+     * attribute's value can be found in the {@link #CurvedBottomNavigation} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -14573,10 +14573,10 @@ public final class R {
      *
      * @attr name com.scaleup.admin.curvedbottomnavigation:curvedElevation
      */
-    public static final int CurvedBottomBar_curvedElevation=1;
+    public static final int CurvedBottomNavigation_curvedElevation =1;
     /**
      * <p>This symbol is the offset where the {@link com.scaleup.admin.curvedbottomnavigation.R.attr#curvedFabAlignmentMode}
-     * attribute's value can be found in the {@link #CurvedBottomBar} array.
+     * attribute's value can be found in the {@link #CurvedBottomNavigation} array.
      *
      * <p>Must be one of the following constant values.</p>
      * <table>
@@ -14590,10 +14590,10 @@ public final class R {
      *
      * @attr name com.scaleup.admin.curvedbottomnavigation:curvedFabAlignmentMode
      */
-    public static final int CurvedBottomBar_curvedFabAlignmentMode=2;
+    public static final int CurvedBottomNavigation_curvedFabAlignmentMode =2;
     /**
      * <p>This symbol is the offset where the {@link com.scaleup.admin.curvedbottomnavigation.R.attr#curvedFabAnimationMode}
-     * attribute's value can be found in the {@link #CurvedBottomBar} array.
+     * attribute's value can be found in the {@link #CurvedBottomNavigation} array.
      *
      * <p>Must be one of the following constant values.</p>
      * <table>
@@ -14607,10 +14607,10 @@ public final class R {
      *
      * @attr name com.scaleup.admin.curvedbottomnavigation:curvedFabAnimationMode
      */
-    public static final int CurvedBottomBar_curvedFabAnimationMode=3;
+    public static final int CurvedBottomNavigation_curvedFabAnimationMode =3;
     /**
      * <p>This symbol is the offset where the {@link com.scaleup.admin.curvedbottomnavigation.R.attr#curvedFabCradleMargin}
-     * attribute's value can be found in the {@link #CurvedBottomBar} array.
+     * attribute's value can be found in the {@link #CurvedBottomNavigation} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -14620,10 +14620,10 @@ public final class R {
      *
      * @attr name com.scaleup.admin.curvedbottomnavigation:curvedFabCradleMargin
      */
-    public static final int CurvedBottomBar_curvedFabCradleMargin=4;
+    public static final int CurvedBottomNavigation_curvedFabCradleMargin =4;
     /**
      * <p>This symbol is the offset where the {@link com.scaleup.admin.curvedbottomnavigation.R.attr#curvedFabCradleRoundedCornerRadius}
-     * attribute's value can be found in the {@link #CurvedBottomBar} array.
+     * attribute's value can be found in the {@link #CurvedBottomNavigation} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -14633,10 +14633,10 @@ public final class R {
      *
      * @attr name com.scaleup.admin.curvedbottomnavigation:curvedFabCradleRoundedCornerRadius
      */
-    public static final int CurvedBottomBar_curvedFabCradleRoundedCornerRadius=5;
+    public static final int CurvedBottomNavigation_curvedFabCradleRoundedCornerRadius =5;
     /**
      * <p>This symbol is the offset where the {@link com.scaleup.admin.curvedbottomnavigation.R.attr#curvedFabCradleVerticalOffset}
-     * attribute's value can be found in the {@link #CurvedBottomBar} array.
+     * attribute's value can be found in the {@link #CurvedBottomNavigation} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -14646,17 +14646,17 @@ public final class R {
      *
      * @attr name com.scaleup.admin.curvedbottomnavigation:curvedFabCradleVerticalOffset
      */
-    public static final int CurvedBottomBar_curvedFabCradleVerticalOffset=6;
+    public static final int CurvedBottomNavigation_curvedFabCradleVerticalOffset =6;
     /**
      * <p>This symbol is the offset where the {@link com.scaleup.admin.curvedbottomnavigation.R.attr#curvedHideOnScroll}
-     * attribute's value can be found in the {@link #CurvedBottomBar} array.
+     * attribute's value can be found in the {@link #CurvedBottomNavigation} array.
      *
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      *
      * @attr name com.scaleup.admin.curvedbottomnavigation:curvedHideOnScroll
      */
-    public static final int CurvedBottomBar_curvedHideOnScroll=7;
+    public static final int CurvedBottomNavigation_curvedHideOnScroll =7;
     /**
      * Attributes that can be used with a CustomAttribute.
      * <p>Includes the following attributes:</p>
