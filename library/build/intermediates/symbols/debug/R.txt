@@ -2280,15 +2280,15 @@ int styleable CoordinatorLayout_Layout_layout_behavior 3
 int styleable CoordinatorLayout_Layout_layout_dodgeInsetEdges 4
 int styleable CoordinatorLayout_Layout_layout_insetEdge 5
 int styleable CoordinatorLayout_Layout_layout_keyline 6
-int[] styleable CurvedBottomBar { 0x7f0400c5, 0x7f0400c7, 0x7f0400c8, 0x7f0400c9, 0x7f0400ca, 0x7f0400cb, 0x7f0400cc, 0x7f0400cd }
-int styleable CurvedBottomBar_curvedBackgroundTint 0
-int styleable CurvedBottomBar_curvedElevation 1
-int styleable CurvedBottomBar_curvedFabAlignmentMode 2
-int styleable CurvedBottomBar_curvedFabAnimationMode 3
-int styleable CurvedBottomBar_curvedFabCradleMargin 4
-int styleable CurvedBottomBar_curvedFabCradleRoundedCornerRadius 5
-int styleable CurvedBottomBar_curvedFabCradleVerticalOffset 6
-int styleable CurvedBottomBar_curvedHideOnScroll 7
+int[] styleable CurvedBottomNavigation { 0x7f0400c5, 0x7f0400c7, 0x7f0400c8, 0x7f0400c9, 0x7f0400ca, 0x7f0400cb, 0x7f0400cc, 0x7f0400cd }
+int styleable CurvedBottomNavigation_curvedBackgroundTint 0
+int styleable CurvedBottomNavigation_curvedElevation 1
+int styleable CurvedBottomNavigation_curvedFabAlignmentMode 2
+int styleable CurvedBottomNavigation_curvedFabAnimationMode 3
+int styleable CurvedBottomNavigation_curvedFabCradleMargin 4
+int styleable CurvedBottomNavigation_curvedFabCradleRoundedCornerRadius 5
+int styleable CurvedBottomNavigation_curvedFabCradleVerticalOffset 6
+int styleable CurvedBottomNavigation_curvedHideOnScroll 7
 int[] styleable DesignTheme { 0x7f040047, 0x7f040048 }
 int styleable DesignTheme_bottomSheetDialogTheme 0
 int styleable DesignTheme_bottomSheetStyle 1

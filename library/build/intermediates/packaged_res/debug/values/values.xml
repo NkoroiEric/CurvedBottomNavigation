@@ -4,61 +4,74 @@
     <attr format="reference" name="curvedBottomBarStyle"/>
     <color name="design_bottom_navigation_shadow_color">#14000000</color>
     <declare-styleable name="BottomNavigationView">
-    
+    <!-- The menu resource to inflate and populate items from. Attribute type definition is in
+         navigation package. -->
     <attr name="menu"/>
-    
+    <!-- Whether navigation items display with a label, without a label, or with a label during
+         selected state. Can also be "auto", which uses the item count to determine whether to show
+         or hide the label. -->
     <attr name="labelVisibilityMode">
-      
+      <!-- Label behaves as "labeled" when there are 3 items or less, or "selected" when there are
+           4 items or more. -->
       <enum name="auto" value="-1"/>
-      
+      <!-- Label is shown on the selected navigation item. -->
       <enum name="selected" value="0"/>
-      
+      <!-- Label is shown on all navigation items. -->
       <enum name="labeled" value="1"/>
-      
+      <!-- Label is not shown on any navigation items. -->
       <enum name="unlabeled" value="2"/>
     </attr>
-    
+    <!-- The background for the navigation items. Attribute type definition is in navigation
+         package. -->
     <attr name="itemBackground"/>
-    
+    <!-- The size to provide for the navigation item icons. -->
     <attr name="itemIconSize"/>
-    
+    <!-- The tint to apply to the navigation item icons. Attribute type definition is in navigation
+         package. -->
     <attr name="itemIconTint"/>
-    
+    <!-- The text appearance to apply to the inactive navigation item labels. Setting
+         android:textColor in itemTextAppearanceInactive will take precedence over android:textColor
+         in itemTextAppearanceActive. Instead, set itemTextColor with a ColorStateList to make
+         the text color stateful. -->
     <attr format="reference" name="itemTextAppearanceInactive"/>
-    
+    <!-- The text appearance to apply to the active navigation item label. You should not set
+         android:textColor in itemTextAppearanceActive. Instead, set itemTextColor to a
+         ColorStateList to make the text color stateful. -->
     <attr format="reference" name="itemTextAppearanceActive"/>
-    
+    <!-- The color to apply to the navigation items' text. Setting itemTextColor will take
+         precedence over android:textColor in itemTextAppearanceInactive or
+         itemTextAppearanceActive. Attribute type definition is in navigation package. -->
     <attr name="itemTextColor"/>
-    
+    <!-- Whether the items translate horizontally when in "selected" label visibility mode. -->
     <attr format="boolean" name="itemHorizontalTranslationEnabled"/>
     <attr name="elevation"/>
   </declare-styleable>
-    <declare-styleable name="CurvedBottomBar">
-    
+    <declare-styleable name="CurvedBottomNavigation">
+    <!-- Background for the BottomAppBar. -->
     <attr name="curvedBackgroundTint"/>
-    
+    <!-- Elevation for the BottomAppBar. -->
     <attr name="curvedElevation"/>
-    
+    <!-- The alignment of the fab relative to the BottomAppBar. -->
     <attr name="curvedFabAlignmentMode">
-      
+      <!-- Mode that aligns the fab to the center. -->
       <enum name="center" value="0"/>
-      
+      <!-- Mode that aligns the fab to the end. -->
       <enum name="end" value="1"/>
     </attr>
-    
+    <!-- The animation mode that should be used when the fab animates between alignment modes. -->
     <attr name="curvedFabAnimationMode">
-      
+      <!-- Mode that scales the fab down to a point, moves it, then scales the fab back to its normal size. -->
       <enum name="scale" value="0"/>
-      
+      <!-- Mode that slides the fab from one alignment mode to the next. -->
       <enum name="slide" value="1"/>
     </attr>
-    
+    <!-- The margin between the semi-circular cradle for the fab and the fab. -->
     <attr format="dimension" name="curvedFabCradleMargin"/>
-    
+    <!-- The radius of the rounded corners on each side of the cradle. -->
     <attr format="dimension" name="curvedFabCradleRoundedCornerRadius"/>
-    
+    <!-- The vertical offset between the fab from the cradle. -->
     <attr format="dimension" name="curvedFabCradleVerticalOffset"/>
-    
+    <!-- Whether the BottomAppBar should hide when a NestedScrollView is scrolled. -->
     <attr format="boolean" name="curvedHideOnScroll"/>
   </declare-styleable>
     <dimen name="design_bottom_navigation_active_item_max_width">168dp</dimen>

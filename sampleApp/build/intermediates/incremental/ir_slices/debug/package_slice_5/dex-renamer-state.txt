@@ -1,0 +1,4 @@
+#Mon Nov 26 10:11:40 EAT 2018
+base.0=E\:\\pic\\CurvedBottomNavigation\\sampleApp\\build\\intermediates\\transforms\\dexMerger\\debug\\5
+path.0=classes.dex
+renamed.0=classes.dex
